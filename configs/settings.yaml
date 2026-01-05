@@ -1,0 +1,19 @@
+app:
+  debug_mode: false
+  save_log: true
+
+model:
+  pose_path: "models/clock_pose_v1.pt"
+  pose_conf: 0.4
+
+  digit_path: "models/digit_rec_v1.pt"
+  digit_conf: 0.5
+
+proccessing:
+  warp_width: 320
+  warp_height: 128
+
+camera:
+  id: 0
+  width: 640
+  height: 480
