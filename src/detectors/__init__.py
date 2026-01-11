@@ -1,4 +1,4 @@
-from .pose_detector import PoseDetector
+from .clock_detector import ClockDetector
 from .digit_detector import DigitDetector
 
-__all__ = ["PoseDetector", "DigitDtector"]
+__all__ = ["ClockDetector", "DigitDetector"]

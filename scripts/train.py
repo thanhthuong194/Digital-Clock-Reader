@@ -32,6 +32,8 @@ def train_model(args, mode='detection'):
             imgsz=args.imgsz,
             batch=args.batch,
             device=args.device,
+            iou=args.iou,
+            conf=args.conf,
             lr0=0.001,
             lrf=0.01,
             project=f'run/{mode}',
@@ -63,6 +65,8 @@ if __name__=="__main__":
         sub_p.add_argument('--epochs',  type=int, default=100, help='Number of training epochs')
         sub_p.add_argument('--batch', type=int, default=16, help="Batch size")
         sub_p.add_argument('--device', default='0', help='gpus')
+        sub_p.add_argument('--iou', type=float, default=0.7, help='IOU threshold for NMS')
+        sub_p.add_argument('--conf', type=float, default=0.4, help='Confidence threshold for training')
 
     # Detection
     parser_det = subparsers.add_parser('detection', help='Train Pose Model(Find Clock)')
